@@ -1,0 +1,199 @@
+/* ./src/client/styles.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@font-face {
+	font-family: theFont;
+	src: url(/assets/css/Oswald-ExtraLight.ttf);
+}
+@font-face {
+	font-family: fontBold;
+	src: url(/assets/css/Oswald-Regular.ttf);
+}
+body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	font-family: fontBold;
+	font-weight: 300;
+	height: 2000px;
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
+.videoContainer {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.centerPiece {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.leftCorner {
+	font-size: 2rem;
+	z-index: 30;
+	text-align: center;
+	color: black;
+}
+
+.freestyleContainer {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	font-size: 10rem;
+	font-family: fontBold;
+	z-index: 30;
+	color: black;
+}
+
+.navMenu {
+	position: absolute;
+	z-index: 35;
+	color: black;
+	top: 10%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.navMenu a {
+	color: black;
+	text-decoration: none;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-weight: 500;
+	display: inline-block;
+	padding: 0 20px;
+	/* width: 80px; */
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+	color: #fddb3a;
+}
+
+.navMenu .dot {
+	width: 6px;
+	height: 6px;
+	background: #fddb3a;
+	border-radius: 50%;
+	opacity: 0;
+	-webkit-transform: translateX(30px);
+	transform: translateX(30px);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.container {
+	text-align: center;
+	width: 100vw;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.sectionContainer {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	color: black;
+	z-index: 30;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: 20px;
+	font-size: 3rem;
+}
+
+.lds-dual-ring {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+}
+.lds-dual-ring:after {
+	content: ' ';
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid #000;
+	border-color: #000 transparent #000 transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loader {
+	position: absolute;
+	background-color: white;
+	z-index: 35;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer {
+	font-family: theFont;
+	width: 100vw;
+	position: fixed;
+	height: 10vh;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 8vh;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+}
+.footer p {
+	position: absolute;
+	z-index: 35;
+	font-weight: 600;
+	color: black;
+	animation: fadeIn 1s infinite alternate;
+}
+
+@media (max-width: 1000px) {
+	.split {
+		font-size: 0.5em;
+		letter-spacing: 15px;
+	}
+}
+
+@media (max-width: 500px) {
+	.split {
+		letter-spacing: 12px;
+	}
+	.navMenu a {
+		font-size: 0.8em;
+		padding: 10px;
+	}
+}

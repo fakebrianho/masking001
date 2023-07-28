@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+  <link href='/src/client/style.css' rel='stylesheet' />
+</head>
+
+<body>
+  <div class='loader'>
+    <div class="lds-dual-ring"></div>
+  </div>
+  <section style='visibility: hidden;' class='main'>
+    <nav class="navMenu">
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">Work</a>
+      <a href="#">About</a>
+      <div class="dot"></div>
+    </nav>
+    <section class='sectionContainer'>
+      <div class='container'>
+        <h1 class='split'>CONNECT AND INSPIRE</h1>
+      </div>
+      <div class='container'>
+        <h1 class='split'>CREATE NYC</h1>
+      </div>
+    </section>
+    <section class='footer'>
+      <p>SCROLL</p>
+    </section>
+    <section class='videoContainer'>
+      <video autoplay muted loop class='videoElement'>
+        <source src="/assets/video.mp4" type="video/mp4">
+      </video>
+    </section>
+  </section>
+  <script type="module" src="/src/client/main.ts"></script>
+</body>
+
+</html>
