@@ -1,7 +1,6 @@
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js'
 import { TexturePass } from 'three/addons/postprocessing/TexturePass.js'
 import { ClearPass } from 'three/addons/postprocessing/ClearPass.js'
-import { RenderPass } from 'three/addons/postprocessing/RenderPass.js'
 
 import {
 	MaskPass,
@@ -13,7 +12,6 @@ import {
 	Scene,
 	VideoTexture,
 	WebGLRenderTarget,
-	Color,
 	WebGLRenderer,
 } from 'three'
 
